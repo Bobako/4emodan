@@ -9,6 +9,7 @@ TOPICS = {  # формат словаря: {адрес топика: назва�
     "/devices/wb-msw-v3_21/controls/Sound Level": "Sound Level",
     "/devices/wb-ms_11/controls/Illuminance": "Illuminace"
 }
+
 JSON_FILENAME = "values.json"
 with open(JSON_FILENAME, "w") as file:
     json.dump([], file)  # пишем в жсон пустой массив
