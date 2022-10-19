@@ -19,7 +19,10 @@ def main():
     for topic_name, value_name in TOPICS.items():
         os.system("touch " + value_name)  # создать по файлу для записи последних значений
         # подписка на топик с перенаправлением вывода в созданный файл
-        os.system(f'mosquitto_sub -t "{topic_name}" -v > {value_name} &')
+        #os.system(f'mosquitto_sub -t "{topic_name}" > {value_name} &')
+        
+        os.system('mosquitto_sub -t "' + topic_name + '" > "' + value_name + '" &')  # для версий, не поддерживающих f-строки
+        
     while True:
         time.sleep(5)  # каждые пять секунд
 
@@ -33,7 +36,7 @@ def main():
                 try:  # обработка исключения на случай того, что файл занят записью
                     with open(value_name, "r") as file:
                         last_value = file.readlines()[-1]
-                        values[value_name] = last_value
+                        values[value_name] = float(last_value.replace("\n", ""))
                     break
                 except:
                     time.sleep(0.001)
