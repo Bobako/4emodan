@@ -27,3 +27,24 @@ json.dump() и json.load() - запоковать и распоковать json
 os.system() - выполнить bash команду
 time.sleep(n) - подождать n секунд
 sys.argv - получить агрументы коммандной строки при вызове скрипта
+
+
+
+Вывод парсера жсонов:
+user@wirenboard-ACD7MK2H:~/task7$ python3 print_values.py values.json 
+{'Motion': 530.0, 'Sound Level': 69.59, 'Illuminace': 339.0, 'box_number': 26, 'datetime': '2022-10-19T15:28:38.412313', 'Temperature': 23.1}
+{'Motion': 289.0, 'Sound Level': 45.52, 'Illuminace': 342.0, 'box_number': 26, 'datetime': '2022-10-19T15:28:43.441796', 'Temperature': 23.1}
+{'Motion': 66.0, 'Sound Level': 59.02, 'Illuminace': 343.0, 'box_number': 26, 'datetime': '2022-10-19T15:28:48.456639', 'Temperature': 23.1}
+{'Motion': 180.0, 'Sound Level': 59.63, 'Illuminace': 339.0, 'box_number': 26, 'datetime': '2022-10-19T15:28:53.485744', 'Temperature': 23.1}
+{'Motion': 104.0, 'Sound Level': 62.63, 'Illuminace': 346.0, 'box_number': 26, 'datetime': '2022-10-19T15:28:58.518299', 'Temperature': 23.1}
+{'Motion': 225.0, 'Sound Level': 54.64, 'Illuminace': 347.0, 'box_number': 26, 'datetime': '2022-10-19T15:29:03.562280', 'Temperature': 23.1}
+{'Motion': 213.0, 'Sound Level': 60.81, 'Illuminace': 342.0, 'box_number': 26, 'datetime': '2022-10-19T15:29:08.596227', 'Temperature': 23.1}
+{'Motion': 249.0, 'Sound Level': 60.61, 'Illuminace': 338.0, 'box_number': 26, 'datetime': '2022-10-19T15:29:13.622856', 'Temperature': 23.1}
+{'Motion': 417.0, 'Sound Level': 60.81, 'Illuminace': 338.0, 'box_number': 26, 'datetime': '2022-10-19T15:29:18.712193', 'Temperature': 23.1}
+{'Motion': 410.0, 'Sound Level': 52.49, 'Illuminace': 338.0, 'box_number': 26, 'datetime': '2022-10-19T15:29:23.751762', 'Temperature': 23.1}
+{'Motion': 256.0, 'Sound Level': 46.73, 'Illuminace': 337.0, 'box_number': 26, 'datetime': '2022-10-19T15:29:28.791915', 'Temperature': 23.1}
+{'Motion': 525.0, 'Sound Level': 54.26, 'Illuminace': 337.0, 'box_number': 26, 'datetime': '2022-10-19T15:29:33.852277', 'Temperature': 23.1}
+
+
+Запуск скрипта для подписки и составления жсонов:
+user@wirenboard-ACD7MK2H:~/task7$ python3 main.py &
