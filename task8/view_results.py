@@ -1,7 +1,9 @@
 import csv
 import sys
-
+import matplotlib
 import matplotlib.pyplot as plt
+
+matplotlib.use('Qt5Agg')
 
 
 def main(filename):
